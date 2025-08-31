@@ -1,384 +1,365 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=7.0000" http-equiv="X-UA-Compatible">
-<title>Yimin Fan's Homepage</title>
-<meta name="description" content="Yimin Fan">
-<meta name="keywords" content="Yimin Fan">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yimin Fan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link rel="stylesheet" type="text/css" href="yimin.css">
-<!-- <script type="text/javascript" async="" src="./files/ga.js"></script><script type="text/javascript">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39532305-1']);
-  _gaq.push(['_trackPageview']);
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        .header {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
 
-</script> -->
+        .profile-section {
+            flex-shrink: 0;
+        }
 
-<style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}
-</style></head>
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            background: #f0f0f0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #666;
+            font-weight: 300;
+            border: 1px solid #ddd;
+        }
 
+        .info-section {
+            flex: 1;
+            padding-top: 10px;
+        }
 
+        .name {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .name-pronunciation {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .bio {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .bio a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .news-date {
+            font-weight: 500;
+            color: #000;
+        }
+
+        .news-content {
+            color: #444;
+            margin-top: 2px;
+        }
+
+        .publication-item {
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .publication-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pub-title {
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .pub-details {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .pub-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .pub-details a:hover {
+            text-decoration: underline;
+        }
+
+        .award-item {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 20px;
+            }
+
+            .name {
+                font-size: 1.8rem;
+            }
+
+            .contact-links {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
 <body>
-<div id="content">
+    <div class="container">
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-img">YF</div>
+            </div>
+            
+            <div class="info-section">
+                <h1 class="name">Yimin Fan</h1>
+                <div class="name-pronunciation">Faan, Ngai Man (In Hong Kong Cantonese)</div>
+                <p class="title">2nd year CS Ph.D student<br>Department of Computer Science and Engineering<br>The Chinese University of Hong Kong</p>
+                
+                <div class="bio">
+                    I am a 2nd year CS Ph.D student @ CUHK starting Aug 2023, supervised by <a href="#">Prof. Yu Li</a>. 
+                    I obtained B.Eng in AI (Elite Stream) and IS in the University of Science and Technology of China. 
+                    I am affiliated with <a href="#">the School of the Gifted Young</a>, which originates from 
+                    <a href="#">the first undergraduate program for special young talents in China</a>.
+                    <br><br>
+                    My research interests include Foundation Models for Science (esp. Biology and Healthcare) and Large Language Models (LLM).
+                    <br><br>
+                    I am very grateful for valuable internship experience at <a href="#">Microsoft Research Asia</a>, 
+                    <a href="#">BioMap Research</a>, <a href="#">Qatar Computing Research Institute</a>, 
+                    <a href="#">OpenScienceLab</a> and <a href="#">McGill University</a>.
+                </div>
+                
+                <div class="contact-links">
+                    <a href="mailto:fanyimin@link.cuhk.edu.hk">fanyimin@link.cuhk.edu.hk</a>
+                    <a href="#">CV</a>
+                    <a href="#">Github</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Google Scholar</a>
+                </div>
+            </div>
+        </header>
 
-<div id="news">
-<h2>News</h2><br>
-<font size="5px">
-  <b>June 2024</b><br>
-  <span class="easylink">
-  One Paper accepted by ECCB 2024 & Oxford Bioinformatics ! See you in Turku, Finland !
-  </span><br><br>
-  <b>Feb 2024</b><br>
-  <span class="easylink">
-  One Survey paper out on Foundation models in Bioinformatics !
-  </span><br><br>
-  <b>23 December 2023</b><br>
-  <span class="easylink">
-  One Paper accepted by RECOMB 2024 (accepted rate = 16%) ! See you in Boston, USA !
-  </span><br><br>
-  <b>22 Sept 2023</b><br>
-  <span class="easylink">
-  One Paper accepted by NeurIPS 2023 !
-  </span><br><br>
-  <b>1 Aug 2023</b><br>
-<span class="easylink">
-Thrilled to start Ph.D journel in AIH group at CUHK !
-</span><br><br>
-<!-- <b>1 May 2023</b><br>
-<span class="easylink">
-Admitted by The Chinese University of Hong Kong as a Ph.D student in Computer Science.
-</span><br><br> -->
+        <section class="section">
+            <h2 class="section-title">News</h2>
+            
+            <div class="news-item">
+                <div class="news-date">June 2024</div>
+                <div class="news-content">One Paper accepted by <span class="highlight">ECCB 2024 & Oxford Bioinformatics</span>! See you in Turku, Finland!</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">Feb 2024</div>
+                <div class="news-content">One Survey paper out on Foundation models in Bioinformatics!</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">23 December 2023</div>
+                <div class="news-content">One Paper accepted by <span class="highlight">RECOMB 2024</span> (accepted rate = 16%)! See you in Boston, USA!</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">22 Sept 2023</div>
+                <div class="news-content">One Paper accepted by <span class="highlight">NeurIPS 2023</span>!</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">1 Aug 2023</div>
+                <div class="news-content">Thrilled to start Ph.D journey in AIH group at CUHK!</div>
+            </div>
+        </section>
 
+        <section class="section">
+            <h2 class="section-title">Publications</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">AI4S stands for AI for Science. LLM stands for Large Language Model. * indicates equal contributions</p>
+            
+            <div class="publication-item">
+                <div class="pub-title">Learning Meaningful Representation of Single-Neuron Morphology via Large-scale Pre-training</div>
+                <div class="pub-details">
+                    <strong>Yimin Fan</strong>*, Yaxuan Li*, Yunhua Zhong, Liang Hong, Lei Li, and Yu Li<br>
+                    <em>23rd European Conference on Computational Biology (ECCB-24)</em> (Also appear in Oxford Bioinformatics)<br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="pub-title">Progress and Opportunities of Foundation Models in Bioinformatics</div>
+                <div class="pub-details">
+                    Qing Li, Zhihang Hu, Yixuan Wang, Lei Li, <strong>Yimin Fan</strong>, Irwin King, Le Song, Yu Li<br>
+                    <em>Briefings in Bioinformatics</em><br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="pub-title">GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling</div>
+                <div class="pub-details">
+                    <strong>Yimin Fan</strong>, Yu Li, Jun Ding and Yue Li<br>
+                    <em>The 28th Annual International Conference on Research in Computational Molecular Biology (RECOMB-24)</em><br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="pub-title">Evaluating Neuron Interpretation Methods of NLP Models</div>
+                <div class="pub-details">
+                    <strong>Yimin Fan</strong>, Fahim Dalvi, Nadir Durrani and Hassan Sajjad<br>
+                    <em>NeurIPS 2023</em><br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="pub-title">Discovering Representation Sprachbund For Multilingual Pre-Training</div>
+                <div class="pub-details">
+                    <strong>Yimin Fan</strong>, Yaobo Liang, Alexandre Muzio, Hany Hassan, Houqiang Li, Ming Zhou, Nan Duan<br>
+                    <em>Findings of EMNLP 2021</em><br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="pub-title">Enhance the performance of navigation: A two-stage machine learning approach</div>
+                <div class="pub-details">
+                    <strong>Yimin Fan</strong>, Zhiyuan Wang, Yuanpeng Lin, Haisheng Tan<br>
+                    <em>2020 6th International Conference on Big Data Computing and Communications (BIGCOM)</em><br>
+                    <a href="#">[pdf]</a>
+                </div>
+            </div>
+        </section>
 
+        <section class="section">
+            <h2 class="section-title">Awards</h2>
+            
+            <div class="award-item">RECOMB Travel Fellowship, 2024</div>
+            <div class="award-item">ECCB 2024 ISCB Travel Fellowship, 2024</div>
+            <div class="award-item">National Scholarship in China, 2018, 2019, 2020</div>
+            <div class="award-item">Anhui Province Outstanding Graduate 2021</div>
+            <div class="award-item">USTC Outstanding Graduate 2021</div>
+            <div class="award-item">Deecamp AI competition by Sinovation Ventures, Third place in the Finance Track 2020</div>
+            <div class="award-item">Neural Network Intelligence (NNI) by MSRA, Outstanding Project 2020</div>
+            <div class="award-item">Anhui Province Undergraduate Mathematical Contest in Modeling, First Prize 2019</div>
+            <div class="award-item">National Undergraduate Mathematical Contest in Modeling, Second Prize 2019</div>
+            <div class="award-item">The fifth national university student entrepreneur training summer camp, Second prize 2019</div>
+            <div class="award-item">National University students Mathematics Competition, First prize (Anhui), 2018</div>
+        </section>
 
-</div>
-
-<div id="left">
-<table style="background-color:white;">
-<tbody><tr nosave="">
-<td valign="CENTER">
-<img src="yimin.jpg" height="250" align="left">
-</td>
-
-<td valign="CENTER" width="2%">
-</td>
-
-<td valign="CENTER" halign="LEFT">
-<font size="+0">
-<b><font size="+2">Yimin Fan&nbsp;</font></b>
-<p style="margin-left:0px;">
-</p><p style="margin-left:0px;">
-<b>Faan, Ngai Man</b>
-<br>
-<b> (In Hong Kong Cantonese)</b>
-<br>
-
-
-<b>Ph.D student</b>
-</p><p style="margin-left:0px;">
-<a href="https://www.cse.cuhk.edu.hk/", target="_blank">Department of Computer Science and Engineering</a><br/>
-<a href="https://www.cuhk.edu.hk/english/index.html", target="_blank">The Chinese University of Hong Kong</a><br/>
-</p><p style="margin-left:0px;">
-Room 904, Ho Sin-Hang Engineering Building, The Chinese University of Hong Kong,
-Shatin, N.T., Hong Kong SAR, PRC<br>
-</p><p style="margin-left:0px;">
-Email:  fanyimin at link.cuhk.edu.hk<br>
-</p></font><p><font size="+0">
-</p><p style="margin-left:0px;">
- <a href="https://www.overleaf.com/read/kscbjscmptpr">[CV]</a>  <a href="https://github.com/fym0503">[Github]</a>   <a href="https://twitter.com/YiminFanCUHK">[Twitter]</a>
- <br>
- <a href="https://scholar.google.fr/citations?user=zxwUIG8AAAAJ&hl=en&oi=sra">[Google Scholar]</a>
-  </p></font><p><font size="+0">
-</font>
-</p></td>
-</tr>
-</tbody></table>
-
-
-<div class="box">
-  <font size="+1">
-I am a <del>1st</del> 2nd CS Ph.D student @ CUHK starting Aug 2023, supervised by <a href="https://liyu95.com/">Prof.Yu Li</a>.
-</font>
-</div>
-<br>
-
-<div class="box">
-  <font size="+1">
- I obtained B.Eng in AI (Elite Stream) and IS in the University of Science and Technology of China. I am affiliated with <a href="http://en.scgy.ustc.edu.cn/">the School of the Gifted Young</a>, which originates from <a href="http://en.scgy.ustc.edu.cn/profile">the first undergraduate program for special young talents in China</a>.
-</font>
-</div>
-<br>
-<div class="box">
-  <font size="+1">
-My research interests include Foundation Models for Science (esp. Biology and Healthcare) and Large Language Models (LLM).
-</font>
-</div>
-<br>
-<div class="box">
-  <font size="+1">
-I am very grateful for valuable intership experience at <a href="https://www.msra.cn/">Microsoft Research Asia</a>, <a href="https://www.biomap.com/">BioMap Research</a>, <a href="https://www.hbku.edu.qa/en/qcri">Qatar Computing Research Institute</a>, <a href="https://science.openxlab.org.cn/">OpenScienceLab</a> and <a href="https://rimuhc.ca/">McGill University</a>.
-</a>
-</font>
-</div>
-<br>
-<div class="box">
-  <font size="+1">
-I am humbled to receive a number of awards, including RECOMB 2024 Travel Fellowship, ECCB 2024 ISCB Travel Fellowship and China Undergraduate National Scholarships (2018,2019,2020). Very grateful for the recognition !
-</font>
-</div>
-<br>
-<div class="box">
-  <font size="+1">
-If you are interested in my research / interested in AI+BioMed Interdisciplinary research / simply want to chat, feel free to reach out by sending emails !
-</font>
-</div>
-	
-<h2 style="CLEAR: both;">Papers</h2>
-<!-- <br> 
-<h2 style="CLEAR: both; font-size: 15px;" >Before Ph.D</h2> -->
-<div class="box">
-  <font size="+0.5">
-    AI4S stands for AI for Science. LLM stands for Large Language Model.
-</font>
-</div>
-<div class="box">
-  <font size="+0.5">
-    * indicates equal contributions
-</font>
-</div>
-<table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://fanyimin-cuhk.github.io/"  style="font-size: 15px;">J2&C5</a></td>
-    <td><span class="title">Learning Meaningful Representation of Single-Neuron Morphology via Large-scale Pre-training
-      <a href="https://fanyimin-cuhk.github.io/">(pdf)</a>
-    </span> 
-      <br><b>Yimin Fan</b>*,Yaxuan Li*, Yunhua Zhong, Liang Hong, Lei Li, and Yu Li
-      <br>23rd European Conference on Computational Biology (ECCB-24) (Also appear in Oxford Bioinformatics)
-	</td>
-  </tr>
- </tbody>
-</table>
-<table>
-  <table>
-    <tbody>
-    <tr>
-      <td class="left"><a href="https://arxiv.org/abs/2402.04286"  style="font-size: 15px;">J1</a></td>
-      <td><span class="title">Progress and Opportunities of Foundation Models in Bioinformatics
-        <a href="https://academic.oup.com/bib/article/25/6/bbae548/7842778">(pdf)</a>
-      </span> 
-        <br>Qing Li, Zhihang Hu, Yixuan Wang, Lei Li, <b>Yimin Fan</b>, Irwin King, Le Song, Yu Li
-
-        <br>Briefings in Bioinformatics
-    </td>
-    </tr>
-   </tbody>
-  </table>
-  <table>
-<table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://www.biorxiv.org/content/10.1101/2023.11.09.566403v1"  style="font-size: 15px;">C4</a></td>
-    <td><span class="title">GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling
-      <a href="https://www.biorxiv.org/content/10.1101/2023.11.09.566403v1">(pdf)</a>
-    </span> 
-      <br><b>Yimin Fan</b>, Yu Li, Jun Ding and Yue Li
-      <br>The 28th Annual International Conference on Research in Computational Molecular Biology (RECOMB-24)
-	</td>
-  </tr>
- </tbody>
-</table>
-<table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://arxiv.org/abs/2301.12608"  style="font-size: 15px;">C3</a></td>
-    <td><span class="title">Evaluating Neuron Interpretation Methods of NLP Models <a href="https://arxiv.org/abs/2301.12608">(pdf)</a>
-    </span> 
-      <br><b>Yimin Fan</b>, Fahim Dalvi, Nadir Durrani and Hassan Sajjad
-      <br>NeurIPS 2023
-	</td>
-  </tr>
- </tbody>
-</table>
-<table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://aclanthology.org/2021.findings-emnlp.75/" style="font-size: 15px;">C2</a></td>
-    <td><span class="title">Discovering Representation Sprachbund For Multilingual Pre-Training <a href="https://aclanthology.org/2021.findings-emnlp.75/">(pdf)</a>
-    </span> 
-
-      <br> <b>Yimin Fan</b>, Yaobo Liang, Alexandre Muzio, Hany Hassan, Houqiang Li, Ming Zhou, Nan Duan.
-	  <br>Findings of EMNLP 2021
-	</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://ieeexplore.ieee.org/document/9160452" style="font-size: 15px;" >C1</a></td>
-    <td><span class="title">Enhance the performance of navigation: A two-stage machine learning approach<a href="https://ieeexplore.ieee.org/document/9160452">(pdf)</a>
-    </span> 
-      <br><b>Yimin Fan</b>, Zhiyuan Wang, Yuanpeng Lin, Haisheng Tan.
-	  <br>2020 6th International Conference on Big Data Computing
-    and Communications (BIGCOM)
-	</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
-<!-- <h2 style="CLEAR: both;">Technical Reports</h2>
-<br>  -->
-<!-- <h2 style="CLEAR: both; font-size: 15px;" >Before Ph.D</h2> -->
-<!-- <b> Before Ph.D</b> </br></br> -->
-
-<!-- <table>
-  <tbody>
-  <tr>
-    <td class="left"><a href="https://arxiv.org/abs/2301.12608" >pdf</a></td>
-    <td><span class="title">Evaluating Neuron Interpretation Methods of NLP Models
-    </span> 
-      <br>Yimin Fan, Fahim Dalvi, Nadir Durrani and Hassan Sajjad
-	</td>
-  </tr>
- </tbody>
-</table>
-
-
-
-<h2 style="CLEAR: both;">Presentations</h2>
-<table><tbody><tr><td>
-  <span class="title">GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling </span> &nbsp;&nbsp; 
-  <br> - RECOMB 2024 (Oral)
-</td></tr></tbody></table>
-<table><tbody><tr><td>
-  <span class="title">Evaluating Neuron Interpretation Methods of NLP Models  </span> &nbsp;&nbsp; 
-  <br> - International Doctoral Forum 2023
-  <br> - NeurIPS 2023 (Poster)
-</td></tr></tbody></table>
-<table><tbody><tr><td>
-  <span class="title">Discovering Representation Sprachbund For Multilingual Pre-Training </span> &nbsp;&nbsp; 
-  <br> - Findings of EMNLP 2021 (Virtual) <a href="https://aclanthology.org/2021.findings-emnlp.75.mp4">[Video]</a>
-</td></tr></tbody></table>
-
-<h2 style="CLEAR: both;">Education</h2>
-<table>
-  <tbody>
-  <tr>
-    <td><span class="title">The Chinese University of Hong Kong</span> <br>
-  Ph.D student in Computer Science &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Aug 2023 - , Hong Kong SAR, China <br>
-  Advisor: <a href="https://liyu95.com/">Prof.Yu Li</a>
-     </td></tr></tbody></table>
-<table>
-  <tbody>
-  <tr>
-    <td><span class="title">University of Science and Technology of China</span> <br>
-  Master student in Electrical Engineering &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sep 2021 - May 2023, Hefei, Anhui, China <br>
-  Voluntary withdrawn
-     </td></tr></tbody></table>
-<table>
-  <tbody>
-  <tr>
-    <td><span class="title">University of Science and Technology of China</span> <br>
-  Bachelor in Artificial Intelligence and Information Security &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sep 2017 - June 2021, Hefei, Anhui, China <br>
-  Advisor: <a href="https://nanduan.github.io/">Prof. Nan Duan</a> and <a href="http://staff.ustc.edu.cn/~lihq/en/">Prof. Houqiang Li</a>
-     </td></tr></tbody></table>
-<h2 style="CLEAR: both">Experiences</h2>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Visiting Student</span>, BioMap, Sept. 2023 - <br>
-    </td></tr></tbody>
-</table>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Visiting Student</span>, AI for Science team, Shanghai AI Lab, May. 2023 - Sept. 2023 <br>
-    </td></tr></tbody>
-</table>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Research Assistant</span>, McGill University, Sept. 2022 - May. 2023 <br>
-    </td></tr></tbody>
-</table>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Research Intern</span>, Microsoft Research Asia, Natural Language Computing Group, Sept. 2020 - Mar. 2022 <br>
-    </td></tr></tbody>
-</table>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Research and Development Intern (Remote)</span>, Qatar Computing Research Institute, Hamad Bin Khalifa University (HBKU) , Mar 2022 - Mar 2023 <br>
-    </td></tr></tbody>
-</table>
-<table>
-  <tbody><tr>
-    <td> <span class="title">Research Assistant</span>, Linke Lab, University of Science and Technology of China, Nov.2019— Mar.2020 <br>
-    </td></tr></tbody>
-</table>
-<!-- <table>
-  <tbody><tr>
-    <td> <span class="title">Research Intern</span>, Theory Dept., 2012 Lab, Huawei Technologies Co., Ltd, Jan 2020 - June 2020 <br>
-    </td></tr></tbody>
-</table> -->
-
-<h2 style="CLEAR: both;">Professional Activities</h2>
-<table><tbody><tr><td>
-  <span class="title">Journal/Conference Review</span>: <br> 
-Program Chair, EMNLP 2022 <br>
-Program Chair, EMNLP 2021 <br>
-
-
-
-<table><tbody><tr><td>
-    <span class="title">Awards</span>: <br> 
-RECOMB Travel Fellowship, 2024 <br>
-ECCB 2024 ISCB Travel Fellowship, 2024 <br>
-National Scholarship in China, 2018,2019,2020 <br>
-Anhui Province Outstanding Graduate 2021 <br>
-USTC Outstanding Graduate 2021 <br>
-Deecamp AI competition by Sinovation Ventures, Third place in the Finance Track 2020 <br>
-Neural Network Intelligence (NNI) by MSRA, Outstanding Project 2020 <br>
-Anhui Province Undergraduate Mathematical Contest in Modeling, First Prize 2019 <br>
-National Undergraduate Mathematical Contest in Modeling, Second Prize 2019 <br>
-The fifth national university student entrepreneur training summer camp, Second prize 2019 <br>
-National University students Mathematics Competition, First prize(Anhui), 2018 <br>
-</table>
-
-
-
-<table><tbody><tr><td>
-  <span class="title">Teaching Assistant</span>: <br> 
-  Introduction to Blockchain Technologies and Applications 2023@CUHK <br>
-  Numerical Methods B  2019 @USTC <br>
-  Signals and Systems  2020 @USTC <br>
-</table>
-
-<table><tbody><tr><td>
-  <span class="title">Popular science</span>: <br> 
-
-  Popular AI science blogger, Xixiaoyao (One of the authors of the most influential Chinese NLP self-media) <br>
-  Popular science book author, 
-  Hanci Liang, Zhehao Li, Yimin Fan. <a href="http://ahxhyx.com/product.asp?id=315&pid=132">The common practices in the Future: Artificial Intelligence</a> (in Chinese) <br>
-  (an AI book edited by <a href="https://www.beautyofscience.cn/">Beauty of Science</a> for students in elementary schools in Anhui Province in China) <br>
-</table>
-<table><tbody><tr><td>
-  <span class="title">Summer Schools / Workshops / Exchange Programs</span>: <br> 
-  ByteCamp 2022, Bytedance, 2022 <br>
-  Sakura Science exchange program, Cathay Tri-Tech.,inc. 2019 <br>
-</table>
-
-
-
-
-
-</div>
-</div>
-
-
-</body></html>
+        <section class="section">
+            <h2 class="section-title">Professional Activities</h2>
+            
+            <p style="margin-bottom: 15px;"><strong>Journal/Conference Review:</strong><br>
+            Program Chair, EMNLP 2022<br>
+            Program Chair, EMNLP 2021</p>
+            
+            <p style="margin-bottom: 15px;"><strong>Teaching Assistant:</strong><br>
+            Introduction to Blockchain Technologies and Applications 2023@CUHK<br>
+            Numerical Methods B 2019 @USTC<br>
+            Signals and Systems 2020 @USTC</p>
+            
+            <p style="margin-bottom: 15px;"><strong>Popular Science:</strong><br>
+            Popular AI science blogger, Xixiaoyao (One of the authors of the most influential Chinese NLP self-media)<br>
+            Popular science book author, Hanci Liang, Zhehao Li, Yimin Fan. <em>The common practices in the Future: Artificial Intelligence</em> (in Chinese)</p>
+            
+            <p><strong>Summer Schools / Workshops / Exchange Programs:</strong><br>
+            ByteCamp 2022, Bytedance, 2022<br>
+            Sakura Science exchange program, Cathay Tri-Tech.,inc. 2019</p>
+        </section>
+    </div>
+</body>
+</html>
