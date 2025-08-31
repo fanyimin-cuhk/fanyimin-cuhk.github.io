@@ -31,16 +31,12 @@
             align-items: flex-start;
         }
 
-        .profile-section {
-            flex-shrink: 0;
-        }
-
         .profile-img {
             width: 200px;
             height: 200px;
             border-radius: 10px;
             background: #f0f0f0;
-            margin-bottom: 20px;
+            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,56 +48,68 @@
 
         .info-section {
             flex: 1;
-            padding-top: 10px;
         }
 
         .name {
             font-size: 2.2rem;
             font-weight: 400;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #000;
+            text-align: center;
         }
 
         .name-pronunciation {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #666;
             font-style: italic;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .title {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .bio {
             font-size: 1rem;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 25px;
+            color: #666;
+            margin-bottom: 15px;
         }
 
-        .bio a {
+        .department {
             color: #007bff;
             text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: block;
         }
 
-        .bio a:hover {
+        .department:hover {
             text-decoration: underline;
         }
 
+        .university {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .address {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .email {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
         .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            font-size: 0.95rem;
         }
 
         .contact-links a {
             color: #007bff;
             text-decoration: none;
-            font-size: 0.95rem;
+            margin-right: 5px;
         }
 
         .contact-links a:hover {
@@ -117,6 +125,22 @@
             font-weight: 500;
             margin-bottom: 25px;
             color: #000;
+        }
+
+        .bio {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .bio a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
         }
 
         .news-item {
@@ -188,15 +212,12 @@
             .profile-img {
                 width: 150px;
                 height: 150px;
-                margin: 0 auto 20px;
+                margin: 0 auto;
+                font-size: 36px;
             }
 
             .name {
                 font-size: 1.8rem;
-            }
-
-            .contact-links {
-                align-items: center;
             }
         }
     </style>
@@ -204,37 +225,50 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="profile-section">
-                <div class="profile-img">YF</div>
-            </div>
+            <div class="profile-img">YF</div>
             
             <div class="info-section">
                 <h1 class="name">Yimin Fan</h1>
-                <div class="name-pronunciation">Faan, Ngai Man (In Hong Kong Cantonese)</div>
-                <p class="title">2nd year CS Ph.D student<br>Department of Computer Science and Engineering<br>The Chinese University of Hong Kong</p>
+                <div class="name-pronunciation">Faan, Ngai Man<br>(In Hong Kong Cantonese)</div>
+                <div class="title">Ph.D student</div>
                 
-                <div class="bio">
-                    I am a 2nd year CS Ph.D student @ CUHK starting Aug 2023, supervised by <a href="#">Prof. Yu Li</a>. 
-                    I obtained B.Eng in AI (Elite Stream) and IS in the University of Science and Technology of China. 
-                    I am affiliated with <a href="#">the School of the Gifted Young</a>, which originates from 
-                    <a href="#">the first undergraduate program for special young talents in China</a>.
-                    <br><br>
-                    My research interests include Foundation Models for Science (esp. Biology and Healthcare) and Large Language Models (LLM).
-                    <br><br>
-                    I am very grateful for valuable internship experience at <a href="#">Microsoft Research Asia</a>, 
-                    <a href="#">BioMap Research</a>, <a href="#">Qatar Computing Research Institute</a>, 
-                    <a href="#">OpenScienceLab</a> and <a href="#">McGill University</a>.
+                <a href="#" class="department">Department of Computer Science and Engineering</a>
+                <div class="university">The Chinese University of Hong Kong</div>
+                
+                <div class="address">
+                    Room 904, Ho Sin-Hang Engineering Building, The Chinese University of Hong Kong,<br>
+                    Shatin, N.T., Hong Kong SAR, PRC
                 </div>
                 
+                <div class="email">Email: fanyimin at link.cuhk.edu.hk</div>
+                
                 <div class="contact-links">
-                    <a href="mailto:fanyimin@link.cuhk.edu.hk">fanyimin@link.cuhk.edu.hk</a>
-                    <a href="#">CV</a>
-                    <a href="#">Github</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Google Scholar</a>
+                    <a href="#">[CV]</a>
+                    <a href="#">[Github]</a>
+                    <a href="#">[Twitter]</a>
+                    <a href="#">[Google Scholar]</a>
                 </div>
             </div>
         </header>
+
+        <section class="section">
+            <div class="bio">
+                I am a 2nd year CS Ph.D student @ CUHK starting Aug 2023, supervised by <a href="#">Prof. Yu Li</a>. 
+                I obtained B.Eng in AI (Elite Stream) and IS in the University of Science and Technology of China. 
+                I am affiliated with <a href="#">the School of the Gifted Young</a>, which originates from 
+                <a href="#">the first undergraduate program for special young talents in China</a>.
+                <br><br>
+                My research interests include Foundation Models for Science (esp. Biology and Healthcare) and Large Language Models (LLM).
+                <br><br>
+                I am very grateful for valuable internship experience at <a href="#">Microsoft Research Asia</a>, 
+                <a href="#">BioMap Research</a>, <a href="#">Qatar Computing Research Institute</a>, 
+                <a href="#">OpenScienceLab</a> and <a href="#">McGill University</a>.
+                <br><br>
+                I am humbled to receive a number of awards, including RECOMB 2024 Travel Fellowship, ECCB 2024 ISCB Travel Fellowship and China Undergraduate National Scholarships (2018,2019,2020). Very grateful for the recognition!
+                <br><br>
+                If you are interested in my research / interested in AI+BioMed Interdisciplinary research / simply want to chat, feel free to reach out by sending emails!
+            </div>
+        </section>
 
         <section class="section">
             <h2 class="section-title">News</h2>
@@ -266,62 +300,70 @@
         </section>
 
         <section class="section">
-            <h2 class="section-title">Publications</h2>
+            <h2 class="section-title">Papers</h2>
             <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">AI4S stands for AI for Science. LLM stands for Large Language Model. * indicates equal contributions</p>
             
             <div class="publication-item">
-                <div class="pub-title">Learning Meaningful Representation of Single-Neuron Morphology via Large-scale Pre-training</div>
+                <div class="pub-title">J2&C5 Learning Meaningful Representation of Single-Neuron Morphology via Large-scale Pre-training</div>
                 <div class="pub-details">
                     <strong>Yimin Fan</strong>*, Yaxuan Li*, Yunhua Zhong, Liang Hong, Lei Li, and Yu Li<br>
                     <em>23rd European Conference on Computational Biology (ECCB-24)</em> (Also appear in Oxford Bioinformatics)<br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
             
             <div class="publication-item">
-                <div class="pub-title">Progress and Opportunities of Foundation Models in Bioinformatics</div>
+                <div class="pub-title">J1 Progress and Opportunities of Foundation Models in Bioinformatics</div>
                 <div class="pub-details">
                     Qing Li, Zhihang Hu, Yixuan Wang, Lei Li, <strong>Yimin Fan</strong>, Irwin King, Le Song, Yu Li<br>
                     <em>Briefings in Bioinformatics</em><br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
             
             <div class="publication-item">
-                <div class="pub-title">GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling</div>
+                <div class="pub-title">C4 GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling</div>
                 <div class="pub-details">
                     <strong>Yimin Fan</strong>, Yu Li, Jun Ding and Yue Li<br>
                     <em>The 28th Annual International Conference on Research in Computational Molecular Biology (RECOMB-24)</em><br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
             
             <div class="publication-item">
-                <div class="pub-title">Evaluating Neuron Interpretation Methods of NLP Models</div>
+                <div class="pub-title">C3 Evaluating Neuron Interpretation Methods of NLP Models</div>
                 <div class="pub-details">
                     <strong>Yimin Fan</strong>, Fahim Dalvi, Nadir Durrani and Hassan Sajjad<br>
                     <em>NeurIPS 2023</em><br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
             
             <div class="publication-item">
-                <div class="pub-title">Discovering Representation Sprachbund For Multilingual Pre-Training</div>
+                <div class="pub-title">C2 Discovering Representation Sprachbund For Multilingual Pre-Training</div>
                 <div class="pub-details">
                     <strong>Yimin Fan</strong>, Yaobo Liang, Alexandre Muzio, Hany Hassan, Houqiang Li, Ming Zhou, Nan Duan<br>
                     <em>Findings of EMNLP 2021</em><br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
             
             <div class="publication-item">
-                <div class="pub-title">Enhance the performance of navigation: A two-stage machine learning approach</div>
+                <div class="pub-title">C1 Enhance the performance of navigation: A two-stage machine learning approach</div>
                 <div class="pub-details">
                     <strong>Yimin Fan</strong>, Zhiyuan Wang, Yuanpeng Lin, Haisheng Tan<br>
                     <em>2020 6th International Conference on Big Data Computing and Communications (BIGCOM)</em><br>
-                    <a href="#">[pdf]</a>
+                    <a href="#">(pdf)</a>
                 </div>
             </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Professional Activities</h2>
+            
+            <p style="margin-bottom: 15px;"><strong>Journal/Conference Review:</strong><br>
+            Program Chair, EMNLP 2022<br>
+            Program Chair, EMNLP 2021</p>
         </section>
 
         <section class="section">
@@ -341,24 +383,25 @@
         </section>
 
         <section class="section">
-            <h2 class="section-title">Professional Activities</h2>
+            <h2 class="section-title">Teaching Assistant</h2>
             
-            <p style="margin-bottom: 15px;"><strong>Journal/Conference Review:</strong><br>
-            Program Chair, EMNLP 2022<br>
-            Program Chair, EMNLP 2021</p>
+            <div class="award-item">Introduction to Blockchain Technologies and Applications 2023@CUHK</div>
+            <div class="award-item">Numerical Methods B 2019 @USTC</div>
+            <div class="award-item">Signals and Systems 2020 @USTC</div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Popular science</h2>
             
-            <p style="margin-bottom: 15px;"><strong>Teaching Assistant:</strong><br>
-            Introduction to Blockchain Technologies and Applications 2023@CUHK<br>
-            Numerical Methods B 2019 @USTC<br>
-            Signals and Systems 2020 @USTC</p>
+            <div class="award-item">Popular AI science blogger, Xixiaoyao (One of the authors of the most influential Chinese NLP self-media)</div>
+            <div class="award-item">Popular science book author, Hanci Liang, Zhehao Li, Yimin Fan. <em>The common practices in the Future: Artificial Intelligence</em> (in Chinese) (an AI book edited by Beauty of Science for students in elementary schools in Anhui Province in China)</div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Summer Schools / Workshops / Exchange Programs</h2>
             
-            <p style="margin-bottom: 15px;"><strong>Popular Science:</strong><br>
-            Popular AI science blogger, Xixiaoyao (One of the authors of the most influential Chinese NLP self-media)<br>
-            Popular science book author, Hanci Liang, Zhehao Li, Yimin Fan. <em>The common practices in the Future: Artificial Intelligence</em> (in Chinese)</p>
-            
-            <p><strong>Summer Schools / Workshops / Exchange Programs:</strong><br>
-            ByteCamp 2022, Bytedance, 2022<br>
-            Sakura Science exchange program, Cathay Tri-Tech.,inc. 2019</p>
+            <div class="award-item">ByteCamp 2022, Bytedance, 2022</div>
+            <div class="award-item">Sakura Science exchange program, Cathay Tri-Tech.,inc. 2019</div>
         </section>
     </div>
 </body>
